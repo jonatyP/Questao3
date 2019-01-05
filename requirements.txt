@@ -1,0 +1,6 @@
+Django==2.1.4
+pip==9.0.3
+pytz==2018.7
+setuptools==39.0.1
+virtualenv==16.1.0
+
