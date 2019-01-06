@@ -17,11 +17,10 @@ class TemaAdmin(admin.ModelAdmin):
 class ItemTemaAdmin(admin.ModelAdmin):
     list_display = ('nome', 'descricao')
     search_fields = ('nome',)
-    #list_filter = ('criado_em',)
 
 class AluguelAdmin(admin.ModelAdmin):
     list_display = ('dataFesta', 'horaInicio', 'horaTermino', 'valorCobrado')
-
+    list_filter = ('dataFesta',)
 
 class EnderecoAdmin(admin.ModelAdmin):
     list_display = ('logradouro', 'numero', 'complemento', 'bairro', 'cidade', 'uf', 'cep')
@@ -30,6 +29,7 @@ class EnderecoAdmin(admin.ModelAdmin):
 class ClienteAdmin(admin.ModelAdmin):
     list_display = ('nome', 'telefone')
     search_fields = ('nome',)
+    list_filter = ('nome',)
 
 admin.site.register(Tema, TemaAdmin)
 admin.site.register(ItemTema, ItemTemaAdmin)
